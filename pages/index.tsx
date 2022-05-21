@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
-import SearchForm from './SearchForm'
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
+import SearchForm from "./SearchForm";
 
 const Home: NextPage = () => {
   return (
@@ -13,13 +13,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-				<SearchForm />
+        <SearchForm />
       </main>
 
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
