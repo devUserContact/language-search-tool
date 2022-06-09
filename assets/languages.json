@@ -1,0 +1,12 @@
+{
+	"languages": {
+		"korean": {
+			"url": "https://en.dict.naver.com/#/search?query=",
+			"checked": "false"
+		},
+		"japanese": {
+			"url": "https://jisho.org/search/",
+			"checked": "false"
+		}
+	}
+}
