@@ -2,6 +2,10 @@ import type { NextPage } from "next";
 import { SyntheticEvent, useState } from "react";
 import styles from "../../styles/Home.module.scss";
 
+// create a json array for definition of languages 
+// each array object will be titled the respective name of language 
+// json array will have a boolean for the checkbox 
+
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
