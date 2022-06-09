@@ -31,7 +31,6 @@ const SearchForm: NextPage = () => {
             <button className={styles.button} type="submit">
               search
             </button>
-            <input type="checkbox"></input>
           </form>
         </div>
       </div>
