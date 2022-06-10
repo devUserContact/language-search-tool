@@ -3,10 +3,6 @@ import { SyntheticEvent, useState } from "react";
 import languages from "../../assets/languages.json";
 import styles from "../../styles/Home.module.scss";
 
-// create a json array for definition of languages
-// each array object will be titled the respective name of language
-// json array will have a boolean for the checkbox
-
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
@@ -41,13 +37,13 @@ const SearchForm: NextPage = () => {
           <div className={styles.gridWrapper}>
             <iframe
               className={styles.iStyle}
-              src={languages.languages.japanese.url + query}
+              src={languages.japanese.url + query}
             />
           </div>
           <div className={styles.gridWrapper}>
             <iframe
               className={styles.iStyle}
-              src={languages.languages.korean.url + query}
+              src={languages.korean.url + query}
             />
           </div>
         </div>
