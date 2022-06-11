@@ -13,8 +13,9 @@ export const languages: Language[] = [{
   url: 'https://jisho.org/search/',
   checked: false 
 },
-{
-  language: 'mandarin' ,
-  url: ['https://mandarinspot.com/dict?word=', '&phs=pinyin&sort=rel'],
-  checked: false 
-}]
+//{
+//  language: 'mandarin' ,
+//  url: ['https://mandarinspot.com/dict?word=', '&phs=pinyin&sort=rel'],
+//  checked: false 
+//}
+]
