@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { SyntheticEvent, useState } from "react";
-import languages from "../../assets/languages.json";
+import { languages } from "../../assets/languages";
 import styles from "../../styles/Home.module.scss";
 
 const SearchForm: NextPage = () => {
@@ -27,25 +27,22 @@ const SearchForm: NextPage = () => {
             <button className={styles.button} type="submit">
               search
             </button>
-            <input type="checkbox"></input>
+            {languages.map((language, id) => {
+              return (
+                <>
+                  <p>{language.language}</p>
+                  <input type="checkbox" key={id} value={language.language} />
+                </>
+              );
+            })}
           </form>
         </div>
       </div>
       <p></p>
       <div className={styles.container}>
         <div className={styles.grid}>
-          <div className={styles.gridWrapper}>
-            <iframe
-              className={styles.iStyle}
-              src={languages.japanese.url + query}
-            />
-          </div>
-          <div className={styles.gridWrapper}>
-            <iframe
-              className={styles.iStyle}
-              src={languages.korean.url + query}
-            />
-          </div>
+          <div className={styles.gridWrapper}></div>
+          <div className={styles.gridWrapper}></div>
         </div>
       </div>
     </>
