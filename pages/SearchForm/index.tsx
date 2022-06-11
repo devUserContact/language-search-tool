@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useState, useEffect } from "react";
 import { languages } from "../../assets/languages";
 import styles from "../../styles/Home.module.scss";
 
@@ -7,10 +7,14 @@ const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
 
-  const submit = (e: SyntheticEvent) => {
+  let submit = (e: SyntheticEvent) => {
     e.preventDefault();
     setQuery(searchTerm);
   };
+  function searchTermIframes() {
+    if (searchTerm != "") {
+    }
+  }
   return (
     <>
       <h1 className={styles.title}>language search tool</h1>
@@ -41,8 +45,9 @@ const SearchForm: NextPage = () => {
       <p></p>
       <div className={styles.container}>
         <div className={styles.grid}>
-          <div className={styles.gridWrapper}></div>
-          <div className={styles.gridWrapper}></div>
+          {languages.map((language: any, i) => {
+            return <iframe className={styles.iStyle}key={i} src={language.url + query}/>;
+          })}
         </div>
       </div>
     </>
