@@ -46,7 +46,13 @@ const SearchForm: NextPage = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           {languages.map((language: any, i) => {
-            return <iframe className={styles.iStyle}key={i} src={language.url + query}/>;
+            return (
+              <iframe
+                className={styles.iStyle}
+                src={language.url + query}
+                key={i}
+              />
+            );
           })}
         </div>
       </div>
