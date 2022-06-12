@@ -14,7 +14,7 @@ const SearchForm: NextPage = () => {
   };
   class SearchTermIframe extends React.Component {
     render() {
-      if (query != "") {
+      if (query != "" && query == searchTerm) {
         return (
           <div className={styles.container}>
             <div className={styles.grid}>
@@ -31,9 +31,8 @@ const SearchForm: NextPage = () => {
           </div>
         );
       } else {
-        return <></>
+        return <></>;
       }
-
     }
   }
   return (
