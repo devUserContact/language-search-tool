@@ -51,6 +51,14 @@ const SearchForm: NextPage = () => {
             <button className={styles.button} type="submit">
               search
             </button>
+            {languages.map((language, id) => {
+              return (
+                <>
+                  <p>{language.language}</p>
+                  <input type="checkbox" key={id} value={language.language} />
+                </>
+              );
+            })}
           </form>
         </div>
       </div>
