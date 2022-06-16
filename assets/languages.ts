@@ -11,7 +11,7 @@ export const languages: Language[] = [
   },
   {
     language: "hebrew",
-    url: "https://en.glosbe.com/en/he/",
+    url: "",
     checked: false,
   },
   {
@@ -26,7 +26,7 @@ export const languages: Language[] = [
   },
   {
     language: "ukrainian",
-    url: "https://en.glosbe.com/en/uk/",
+    url: "",
     checked: false,
   },
   //{
