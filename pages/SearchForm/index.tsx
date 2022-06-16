@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { renderToHTML } from "next/dist/server/render";
 import React from "react";
 import { SyntheticEvent, useState, useEffect } from "react";
 import { languages } from "../../assets/languages";
@@ -7,7 +8,22 @@ import styles from "../../styles/Home.module.scss";
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
-
+  const selectLanguages = (e: any) => {
+    const checked = e.target.checked;
+    if (checked) {
+      languages.map((language) => {
+        if (language.language == e.target.value) {
+          language.checked = e.target.checked;
+        }
+      });
+    } else {
+      languages.map((language) => {
+        if (language.language == e.target.value) {
+          language.checked = e.target.checked;
+        }
+      });
+    }
+  };
   let submit = (e: SyntheticEvent) => {
     e.preventDefault();
     setQuery(searchTerm);
@@ -19,13 +35,15 @@ const SearchForm: NextPage = () => {
           <div className={styles.container}>
             <div className={styles.grid}>
               {languages.map((language: any, i) => {
-                return (
-                  <iframe
-                    className={styles.iStyle}
-                    src={language.url + query}
-                    key={i}
-                  />
-                );
+                if (language.checked === true) {
+                  return (
+                    <iframe
+                      className={styles.iStyle}
+                      src={language.url + query}
+                      key={i}
+                    />
+                  );
+                }
               })}
             </div>
           </div>
@@ -55,7 +73,14 @@ const SearchForm: NextPage = () => {
               return (
                 <>
                   <p>{language.language}</p>
-                  <input type="checkbox" key={id} value={language.language} />
+                  <input
+                    type="checkbox"
+                    key={id}
+                    value={language.language}
+                    onClick={(e) => {
+                      selectLanguages(e);
+                    }}
+                  />
                 </>
               );
             })}
