@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { renderToHTML } from "next/dist/server/render";
 import React from "react";
 import { SyntheticEvent, useState, useEffect } from "react";
 import { languages } from "../../assets/languages";
@@ -8,18 +7,22 @@ import styles from "../../styles/Home.module.scss";
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [query, setQuery] = useState("");
+  const [searched, setSearched] = useState(false);
+
   const selectLanguages = (e: any) => {
     const checked = e.target.checked;
     if (checked) {
       languages.map((language) => {
         if (language.language == e.target.value) {
           language.checked = e.target.checked;
+          return languages;
         }
       });
     } else {
       languages.map((language) => {
         if (language.language == e.target.value) {
           language.checked = e.target.checked;
+          return languages;
         }
       });
     }
@@ -27,10 +30,12 @@ const SearchForm: NextPage = () => {
   let submit = (e: SyntheticEvent) => {
     e.preventDefault();
     setQuery(searchTerm);
+    setSearched(true);
   };
   class SearchTermIframe extends React.Component {
     render() {
-      if (query != "" && query == searchTerm) {
+      if ((query != "" && query == searchTerm) || searched == true) {
+        setSearched(false);
         return (
           <div className={styles.container}>
             <div className={styles.grid}>
