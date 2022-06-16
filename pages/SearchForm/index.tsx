@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
-import { SyntheticEvent, useState, useEffect } from "react";
+import { SyntheticEvent, useState } from "react";
 import { languages } from "../../assets/languages";
 import styles from "../../styles/Home.module.scss";
 
