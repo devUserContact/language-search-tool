@@ -27,7 +27,6 @@ $screen-xl-min: 1200px;
   width: 100%;
   margin: 1%;
 }
-
 .main {
   min-height: 100vh;
   padding: 2rem 0;
@@ -37,20 +36,12 @@ $screen-xl-min: 1200px;
   justify-content: center;
   align-items: center;
 }
-
 .title {
   margin: 1%;
   line-height: 1.15;
   font-size: 2.5rem;
   text-align: center;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -63,57 +54,36 @@ $screen-xl-min: 1200px;
   justify-items: left;
 }
 .input {
-  width: 12rem;
-  text-align: center;
-  font-size: 12px;
-  margin: 1%;
 }
 .button {
-  width: 6rem;
-  text-align: center;
-  font-size: 12px;
-  margin: 0.5rem;
 }
 .iStyle {
 }
 .checklistContainer {
   margin: 1%;
-  border: solid black 1px;
   border-radius: 10px;
   width: 50%;
 }
 .checklistFlex {
   display: flex;
   margin: 1%;
+  margin-top: -2%;
+  margin-bottom: 5%;
   margin-right: -5%;
 }
 .checklistWrapper {
   display: flex;
   border: solid black 1px;
   border-radius: 15px;
-  margin: 1%;
   margin-right: 2%;
   padding-right: 0.5%;
 }
-.dropdown-selection {
-}
 @include sm {
   .input {
-    width: 20rem;
-    text-align: center;
-    font-size: 18px;
-    margin: 1%;
   }
   .button {
-    width: 10rem;
-    text-align: center;
-    font-size: 18px;
-    margin: 0.5rem;
   }
   .iStyle {
-    height: 40rem;
-    width: 20rem;
-    margin: 0.5rem;
   }
 }
 
@@ -123,37 +93,23 @@ $screen-xl-min: 1200px;
     font-size: 2.75rem;
   }
   .input {
-    width: 25rem;
     text-align: center;
     font-size: 20px;
   }
   .button {
-    width: 15rem;
-    text-align: center;
-    font-size: 20px;
-    margin: 0.5rem;
   }
   .iStyle {
-    height: 40rem;
-    width: 30rem;
   }
 }
 
 @include lg {
   .title {
-    line-height: 1.15;
-    font-size: 3.75rem;
   }
   .input {
-    width: 30rem;
     text-align: center;
     font-size: 24px;
   }
   .button {
-    width: 20rem;
-    text-align: center;
-    font-size: 24px;
-    margin: 0.5rem;
   }
 }
 
@@ -171,6 +127,7 @@ $screen-xl-min: 1200px;
   }
   .input {
     width: 30%;
+    margin: 1%;
     margin-left: -1%;
     text-align: center;
     font-size: 24px;
