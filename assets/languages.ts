@@ -9,11 +9,11 @@ export const languages: Language[] = [
     url: "https://dictionary.cambridge.org/dictionary/english-french/",
     checked: false,
   },
-  {
-    language: "hebrew",
-    url: "",
-    checked: false,
-  },
+//  {
+//    language: "hebrew",
+//    url: "",
+//    checked: false,
+//  },
   {
     language: "korean",
     url: "https://en.dict.naver.com/#/search?query=",
@@ -24,11 +24,11 @@ export const languages: Language[] = [
     url: "https://jisho.org/search/",
     checked: false,
   },
-  {
-    language: "ukrainian",
-    url: "",
-    checked: false,
-  },
+//  {
+//    language: "ukrainian",
+//    url: "",
+//    checked: false,
+//  },
   //{
   //  language: 'mandarin' ,
   //  url: ['https://mandarinspot.com/dict?word=', '&phs=pinyin&sort=rel'],
