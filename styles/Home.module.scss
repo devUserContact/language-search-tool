@@ -24,7 +24,8 @@ $screen-xl-min: 1200px;
   }
 }
 .container {
-  padding: 0 0.25rem;
+  width: 100%;
+  margin: 1%;
 }
 
 .main {
@@ -36,19 +37,11 @@ $screen-xl-min: 1200px;
   justify-content: center;
   align-items: center;
 }
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
 
 .title {
-  margin: 0;
+  margin: 1%;
   line-height: 1.15;
   font-size: 2.5rem;
-}
-
-.title,
-.description {
   text-align: center;
 }
 
@@ -64,17 +57,16 @@ $screen-xl-min: 1200px;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
-.gridWrapper {
-}
 .formWrapper {
-  display: grid;
-  justify-items: center;
+  margin: 1%;
+  width: 100%;
+  justify-items: left;
 }
 .input {
   width: 12rem;
   text-align: center;
   font-size: 12px;
-  margin: 0.5rem;
+  margin: 1%;
 }
 .button {
   width: 6rem;
@@ -83,17 +75,34 @@ $screen-xl-min: 1200px;
   margin: 0.5rem;
 }
 .iStyle {
-  height: 35rem;
-  width: 12rem;
-  margin: 0.25rem;
 }
-
+.checklistContainer {
+  margin: 1%;
+  border: solid black 1px;
+  border-radius: 10px;
+  width: 50%;
+}
+.checklistFlex {
+  display: flex;
+  margin: 1%;
+  margin-right: -5%;
+}
+.checklistWrapper {
+  display: flex;
+  border: solid black 1px;
+  border-radius: 15px;
+  margin: 1%;
+  margin-right: 2%;
+  padding-right: 0.5%;
+}
+.dropdown-selection {
+}
 @include sm {
   .input {
     width: 20rem;
     text-align: center;
     font-size: 18px;
-    margin: 0.5rem;
+    margin: 1%;
   }
   .button {
     width: 10rem;
@@ -110,7 +119,6 @@ $screen-xl-min: 1200px;
 
 @include md {
   .title {
-    margin: 1rem;
     line-height: 1.15;
     font-size: 2.75rem;
   }
@@ -118,7 +126,6 @@ $screen-xl-min: 1200px;
     width: 25rem;
     text-align: center;
     font-size: 20px;
-    margin: 0.5rem;
   }
   .button {
     width: 15rem;
@@ -129,13 +136,11 @@ $screen-xl-min: 1200px;
   .iStyle {
     height: 40rem;
     width: 30rem;
-    margin: 0.5rem;
   }
 }
 
 @include lg {
   .title {
-    margin: 0;
     line-height: 1.15;
     font-size: 3.75rem;
   }
@@ -143,55 +148,41 @@ $screen-xl-min: 1200px;
     width: 30rem;
     text-align: center;
     font-size: 24px;
-    margin: 0.5rem;
   }
   .button {
     width: 20rem;
     text-align: center;
     font-size: 24px;
     margin: 0.5rem;
-  }
-
-  .iStyle {
-    height: 40rem;
-    width: 38rem;
-    margin: 1rem;
   }
 }
 
 @include xl {
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
   }
   .title {
     display: grid;
-    margin: 1rem;
     font-size: 3.75rem;
     justify-items: left;
   }
   .input {
-    width: 30rem;
+    width: 30%;
+    margin-left: -1%;
     text-align: center;
     font-size: 24px;
-    margin: 0.5rem;
   }
   .button {
-    width: 20rem;
+    width: 18%;
     text-align: center;
     font-size: 24px;
-    margin: 0.5rem;
-  }
-
-  .formWrapper {
-    display: grid;
-    justify-items: left;
   }
   .iStyle {
     height: 50rem;
-    width: 38rem;
-    margin: 0.5rem;
+    width: 80%;
+    margin-right: 6%;
   }
 }

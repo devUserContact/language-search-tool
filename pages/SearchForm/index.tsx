@@ -37,7 +37,7 @@ const SearchForm: NextPage = () => {
       if ((query != "" && query == searchTerm) || searched == true) {
         setSearched(false);
         return (
-          <div className={styles.container}>
+          <>
             <div className={styles.grid}>
               {languages.map((language: any, i) => {
                 if (language.checked === true) {
@@ -51,7 +51,7 @@ const SearchForm: NextPage = () => {
                 }
               })}
             </div>
-          </div>
+          </>
         );
       } else {
         return <></>;
@@ -74,10 +74,15 @@ const SearchForm: NextPage = () => {
             <button className={styles.button} type="submit">
               search
             </button>
-            {languages.map((language, id) => {
-              return (
-                <>
-                  <p>{language.language}</p>
+          </form>
+        </div>
+      </div>
+      <div className={styles.checklistContainer}>
+        <div className={styles.checklistFlex}>
+          {languages.map((language, id) => {
+            return (
+              <>
+                <div className={styles.checklistWrapper}>
                   <input
                     type="checkbox"
                     key={id}
@@ -86,10 +91,11 @@ const SearchForm: NextPage = () => {
                       selectLanguages(e);
                     }}
                   />
-                </>
-              );
-            })}
-          </form>
+                  <p>{language.language}</p>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
       <p></p>
