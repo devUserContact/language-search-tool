@@ -116,7 +116,6 @@ $screen-xl-min: 1200px;
     margin-right: 6%;
   }
 }
-
 @include md {
   .input {
     width: 30%;
@@ -125,9 +124,7 @@ $screen-xl-min: 1200px;
     width: 18%;
   }
 }
-
 @include lg {
 }
-
 @include xl {
 }
