@@ -82,7 +82,7 @@ const SearchForm: NextPage = () => {
           {languages.map((language, id) => {
             return (
               <>
-                <div className={styles.checklistWrapper}>
+                <label className={styles.checklistWrapper}>
                   <input
                     type="checkbox"
                     key={id}
@@ -92,7 +92,7 @@ const SearchForm: NextPage = () => {
                     }}
                   />
                   <p>{language.language}</p>
-                </div>
+                </label>
               </>
             );
           })}
