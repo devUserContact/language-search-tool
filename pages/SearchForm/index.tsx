@@ -3,6 +3,7 @@ import React from "react";
 import { SyntheticEvent, useState } from "react";
 import { languages } from "../../assets/languages";
 import styles from "../../styles/Home.module.scss";
+import Footer from "../Footer";
 
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,7 +39,7 @@ const SearchForm: NextPage = () => {
         setSearched(false);
         return (
           <>
-            <div className={styles.grid}>
+            <div className={styles.iframeGrid}>
               {languages.map((language: any, i) => {
                 if (language.checked === true) {
                   return (
@@ -51,10 +52,17 @@ const SearchForm: NextPage = () => {
                 }
               })}
             </div>
+						<div className={styles.footer}>
+							<Footer />
+						</div>
           </>
         );
       } else {
-        return <></>;
+        return(
+					<div className={styles.footerAbsolute}>
+						<Footer />
+					</div>
+        )
       }
     }
   }
