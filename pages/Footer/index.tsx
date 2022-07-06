@@ -6,7 +6,10 @@ const Footer: NextPage = () => {
 		<div>
 			<p className={styles.footerText}>
 				created by{" "}
-				<a href="https://github.com/devUserContact">devUserContact</a> 🐦
+				<a href="https://github.com/devUserContact" target="_blank">
+					devUserContact
+				</a>{" "}
+				🐦
 			</p>
 		</div>
 	);
