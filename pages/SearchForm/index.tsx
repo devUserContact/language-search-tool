@@ -3,7 +3,7 @@ import React from "react";
 import { SyntheticEvent, useState } from "react";
 import { languages } from "../../assets/languages";
 import styles from "../../styles/Home.module.scss";
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 
 const SearchForm: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState("");

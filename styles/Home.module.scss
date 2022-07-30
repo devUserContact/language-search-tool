@@ -36,7 +36,6 @@ $screen-xl-min: 1200px;
 }
 .formContainer {
 	width: 100%;
-	margin: 1%;
 }
 .main {
 	height: 100%;
@@ -49,17 +48,22 @@ $screen-xl-min: 1200px;
 }
 .footer {
 	width: 100%;
-	border-top: 1px solid #eaeaea;
+	border-top: 0.1rem solid #eaeaea;
 }
 .footerAbsolute {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	border-top: 1px solid #eaeaea;
+	border-top: 0.1rem solid #eaeaea;
+}
+.footerText {
+	text-align: right;
+	margin-right: 1%;
 }
 .title {
 	margin: 1%;
+	margin-left: 1.5%;
 	line-height: 1.15;
 	font-size: 1.75rem;
 	text-align: center;
@@ -78,7 +82,6 @@ $screen-xl-min: 1200px;
 	justify-items: center;
 }
 .formWrapper {
-	margin: 1%;
 	width: 100%;
 	align-items: center;
 }
@@ -87,12 +90,12 @@ $screen-xl-min: 1200px;
 	margin: 1%;
 	margin-left: 0.5%;
 	text-align: center;
-	font-size: 20px;
+	font-size: 2.5rem;
 }
 .button {
 	width: 50%;
 	text-align: center;
-	font-size: 20px;
+	font-size: 2.5rem;
 }
 .iStyle {
 	height: 50rem;
@@ -102,31 +105,28 @@ $screen-xl-min: 1200px;
 }
 .checklistContainer {
 	margin: 1%;
-	border-radius: 10px;
+	margin-left: 1.7%;
+	border-radius: 1rem;
 	width: 50%;
 }
 .checklistFlex {
 	display: flex;
-	margin: 1%;
-	margin-top: -2%;
+	margin-top: -1%;
 	margin-bottom: 5%;
-	margin-right: -5%;
 }
 .checklistWrapper {
 	display: flex;
 	border: solid black 1px;
-	border-radius: 15px;
+	border-radius: 1rem;
 	margin-right: 2%;
-	padding-right: 0.5%;
+	padding-right: 0.75%;
+	font-size: 1.5rem;
 
 	&:hover {
 		background: #5c79f9;
 	}
 }
-.footerText {
-	text-align: right;
-	margin-right: 1%;
-}
+
 @include sm {
 	.grid {
 		display: grid;
@@ -136,8 +136,17 @@ $screen-xl-min: 1200px;
 	}
 	.title {
 		display: grid;
-		font-size: 3.75rem;
+		margin-top: 2%;
 		justify-items: left;
+		font-size: 5rem;
+	}
+	.input {
+		width: 50%;
+		font-size: 2rem;
+	}
+	.button {
+		width: 18%;
+		font-size: 2rem;
 	}
 	.formWrapper {
 		margin: 1%;
@@ -150,15 +159,43 @@ $screen-xl-min: 1200px;
 		margin-right: 6%;
 	}
 }
+
 @include md {
+	.title {
+		font-size: 5.6rem;
+	}
 	.input {
-		width: 30%;
+		width: 40%;
+		font-size: 2.5rem;
 	}
 	.button {
 		width: 18%;
+		font-size: 2.5rem;
+	}
+	.checklistWrapper {
+		font-size: 1.6rem;	
 	}
 }
+
 @include lg {
+	.title {
+		font-size: 5.6rem;
+	}
+	.footerText {
+		margin-right: 1.5%;
+		font-size: 1.6rem;
+	}
 }
+
 @include xl {
+	.title {
+		margin-top: 1%;
+		font-size: 6rem;
+	}
+	.input {
+		width: 35%;
+	}
+	.footerText {
+		font-size: 1.8rem;
+	}
 }
