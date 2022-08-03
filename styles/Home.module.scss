@@ -46,6 +46,73 @@ $screen-xl-min: 1200px;
 	justify-content: center;
 	align-items: center;
 }
+.title {
+	margin: 1%;
+	margin-top: 5%;
+	margin-bottom: 4%;
+	font-size: 3.5rem;
+	text-align: center;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	justify-items: center;
+}
+.formWrapper {
+	width: 100%;
+	align-items: center;
+}
+.input {
+	display: block;
+	width: 85%;
+	margin: auto;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 2rem;
+}
+.button {
+	display: block;
+	width: 45%;
+	margin: auto;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 2rem;
+}
+.checklistContainer {
+	display: flex;
+	margin: auto;
+	border-radius: 1rem;
+	width: 50%;
+}
+.checklistFlex {
+	display: flex;
+	margin-bottom: 5%;
+}
+.checklistWrapper {
+	display: flex;
+	border: solid black 1px;
+	border-radius: 1rem;
+	margin-right: 5%;
+	padding-right: 0.75%;
+	font-size: 1.5rem;
+
+	&:hover {
+		background: #5c79f9;
+	}
+}
+.iframeGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	justify-items: center;
+}
+.iStyle {
+	height: 100rem;
+	width: 80%;
+	margin-right: 6%;
+	margin-bottom: 8%;
+}
 .footer {
 	width: 100%;
 	border-top: 0.1rem solid #eaeaea;
@@ -59,72 +126,8 @@ $screen-xl-min: 1200px;
 }
 .footerText {
 	text-align: right;
-	margin-right: 1%;
-}
-.title {
-	margin: 1%;
-	margin-left: 1.5%;
-	line-height: 1.15;
-	font-size: 1.75rem;
-	text-align: center;
-}
-.grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	justify-items: center;
-}
-.iframeGrid {
-	display: grid;
-	min-height: 100%;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	justify-items: center;
-}
-.formWrapper {
-	width: 100%;
-	align-items: center;
-}
-.input {
-	width: 90%;
-	margin: 1%;
-	margin-left: 0.5%;
-	text-align: center;
-	font-size: 2.5rem;
-}
-.button {
-	width: 50%;
-	text-align: center;
-	font-size: 2.5rem;
-}
-.iStyle {
-	height: 50rem;
-	width: 80%;
-	margin-right: 6%;
-	margin-bottom: 8%;
-}
-.checklistContainer {
-	margin: 1%;
-	margin-left: 1.7%;
-	border-radius: 1rem;
-	width: 50%;
-}
-.checklistFlex {
-	display: flex;
-	margin-top: -1%;
-	margin-bottom: 5%;
-}
-.checklistWrapper {
-	display: flex;
-	border: solid black 1px;
-	border-radius: 1rem;
-	margin-right: 2%;
-	padding-right: 0.75%;
-	font-size: 1.5rem;
-
-	&:hover {
-		background: #5c79f9;
-	}
+	margin-right: 4%;
+	font-size: 1.6rem;
 }
 
 @include sm {
@@ -137,14 +140,21 @@ $screen-xl-min: 1200px;
 	.title {
 		display: grid;
 		margin-top: 2%;
+		margin-bottom: auto;
+		margin-left: 1.5%;
+		line-height: 1.15;
 		justify-items: left;
 		font-size: 5rem;
 	}
 	.input {
+		display: inline-block;
 		width: 50%;
+		margin: 1%;
+		margin-left: 0.5%;
 		font-size: 2rem;
 	}
 	.button {
+		display: inline-block;
 		width: 18%;
 		font-size: 2rem;
 	}
@@ -153,8 +163,11 @@ $screen-xl-min: 1200px;
 		width: 100%;
 		justify-items: left;
 	}
+	.checklistContainer {
+		margin: 1%;
+		margin-left: 1.7%;
+	}
 	.iStyle {
-		height: 50rem;
 		width: 80%;
 		margin-right: 6%;
 	}
@@ -173,7 +186,10 @@ $screen-xl-min: 1200px;
 		font-size: 2.5rem;
 	}
 	.checklistWrapper {
-		font-size: 1.6rem;	
+		font-size: 1.6rem;
+	}
+	.iframeGrid {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -182,7 +198,7 @@ $screen-xl-min: 1200px;
 		font-size: 5.6rem;
 	}
 	.footerText {
-		margin-right: 1.5%;
+		margin-right: 2%;
 		font-size: 1.6rem;
 	}
 }
