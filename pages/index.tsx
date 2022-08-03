@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Footer from "./Footer";
 import styles from "../styles/Home.module.scss";
 import SearchForm from "./SearchForm";
 
