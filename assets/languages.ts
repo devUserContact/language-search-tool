@@ -9,6 +9,11 @@ export const languages: Language[] = [
     url: "https://dictionary.cambridge.org/dictionary/english-french/",
     checked: false,
   },
+  {
+    language: "italian",
+    url: "https://dictionary.cambridge.org/dictionary/english-italian/",
+    checked: false,
+  },
 //  {
 //    language: "hebrew",
 //    url: "",
