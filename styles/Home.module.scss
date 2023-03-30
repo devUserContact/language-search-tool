@@ -25,6 +25,7 @@ $screen-xl-min: 1200px;
 }
 
 .mainWrapper {
+  background-color: #d9d9d9;
 	height: auto;
 }
 .container {
@@ -69,6 +70,8 @@ $screen-xl-min: 1200px;
 	margin: auto;
 	margin-bottom: 1rem;
 	text-align: center;
+	border-radius: 0.25rem;
+	border-color: black;
 	font-size: 2rem;
 }
 .button {
@@ -77,6 +80,8 @@ $screen-xl-min: 1200px;
 	margin: auto;
 	margin-bottom: 1rem;
 	text-align: center;
+	border-radius: 2rem;
+	border-color: black;
 	font-size: 2rem;
 }
 .checklistContainer {
