@@ -4,16 +4,16 @@ export interface Language {
   checked: boolean;
 }
 export const languages: Language[] = [
-  {
-    language: "french",
-    url: "https://dictionary.cambridge.org/dictionary/english-french/",
-    checked: false,
-  },
-  {
-    language: "italian",
-    url: "https://dictionary.cambridge.org/dictionary/english-italian/",
-    checked: false,
-  },
+//  {
+//    language: "french",
+//    url: "https://dictionary.cambridge.org/dictionary/english-french/",
+//    checked: false,
+//  },
+//  {
+//    language: "italian",
+//    url: "https://dictionary.cambridge.org/dictionary/english-italian/",
+//    checked: false,
+//  },
 //  {
 //    language: "hebrew",
 //    url: "",
